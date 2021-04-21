@@ -1,0 +1,60 @@
+int pinData  = 2;
+int pinLatch = 3;
+int pinClock = 4;
+#define TIEMPO 15
+
+
+void ledWrite(int Led){
+   shiftOut(pinData, pinClock, LSBFIRST, Led);
+   digitalWrite(pinLatch, HIGH);
+   digitalWrite(pinLatch, LOW);
+}
+void LetraA (){
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11100111); delay(TIEMPO);
+   ledWrite(B01100110); delay(TIEMPO);
+   ledWrite(B00111100); delay(TIEMPO);
+   ledWrite(B00011000); delay(TIEMPO);
+  delay(500000000000000000);}
+void LetraB(){
+     ledWrite(B11111110); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11111110); delay(TIEMPO);
+   ledWrite(B11111110); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111110); delay(TIEMPO);
+  delay(500000000000000000);}
+void setup(){
+   pinMode(pinData, OUTPUT);
+   pinMode(pinLatch, OUTPUT);
+   pinMode(pinClock, OUTPUT);
+
+
+
+
+
+Letra A 
+ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11100111); delay(TIEMPO);
+   ledWrite(B01100110); delay(TIEMPO);
+   ledWrite(B00111100); delay(TIEMPO);
+   ledWrite(B00011000); delay(TIEMPO);
+
+Letra B
+ledWrite(B11111110); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11111110); delay(TIEMPO);
+   ledWrite(B11111110); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111110); delay(TIEMPO);
+

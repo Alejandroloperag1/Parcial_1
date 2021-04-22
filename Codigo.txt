@@ -9,6 +9,16 @@ void ledWrite(int Led){
    digitalWrite(pinLatch, HIGH);
    digitalWrite(pinLatch, LOW);
 }
+void CaritaFeliz(){
+   ledWrite(B00111100); delay(TIEMPO);
+   ledWrite(B01100110); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B00000000); delay(TIEMPO);
+   ledWrite(B00000000); delay(TIEMPO);
+   ledWrite(B01100110); delay(TIEMPO);
+   ledWrite(B01100110); delay(TIEMPO);
+  delay(500000000000000000);}
 void LetraA (){
    ledWrite(B11000011); delay(TIEMPO);
    ledWrite(B11000011); delay(TIEMPO);
@@ -29,32 +39,274 @@ void LetraB(){
    ledWrite(B11111111); delay(TIEMPO);
    ledWrite(B11111110); delay(TIEMPO);
   delay(500000000000000000);}
-void setup(){
-   pinMode(pinData, OUTPUT);
-   pinMode(pinLatch, OUTPUT);
-   pinMode(pinClock, OUTPUT);
-
-
-
-
-
-Letra A 
-ledWrite(B11000011); delay(TIEMPO);
+void LetraC(){
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11100000); delay(TIEMPO);
+   ledWrite(B11100000); delay(TIEMPO);
+   ledWrite(B11100000); delay(TIEMPO);
+   ledWrite(B11100000); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111110); delay(TIEMPO);
+  delay(500000000000000000);}
+void Num0(){
+ 
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11100111); delay(TIEMPO);
    ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11100111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+  delay(500000000000000000);}
+  
+void Num9(){
+     ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11000111); delay(TIEMPO);
+   ledWrite(B11000111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+  delay(500000000000000000);}
+void Num8(){
+     ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11100111); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11100111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+  delay(500000000000000000);}
+void Num7(){
+     ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B00011111); delay(TIEMPO);
+   ledWrite(B00011111); delay(TIEMPO);
+   ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+  delay(500000000000000000);}
+void Num6(){
+     ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+  delay(500000000000000000);}
+void Num5(){
+     ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11100000); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+  delay(500000000000000000);}
+void Num4(){
+     ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B01100011); delay(TIEMPO);
+   ledWrite(B00110011); delay(TIEMPO);
+   ledWrite(B00011111); delay(TIEMPO);
+  delay(500000000000000000);}
+void Num3(){
+      ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B00000011); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B00000011); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+  delay(500000000000000000);}
+void Num2(){
+     ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11100000); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+  delay(500000000000000000);}
+void Num1(){ 
+   ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B01110111); delay(TIEMPO);
+   ledWrite(B00111111); delay(TIEMPO);
+   ledWrite(B00011111); delay(TIEMPO);
+   ledWrite(B00001111); delay(TIEMPO);
+  delay(500000000000000000);}
+void LetraZ(){
+   ledWrite(B00000000); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11000000); delay(TIEMPO);
+   ledWrite(B00110000); delay(TIEMPO);
+   ledWrite(B00001100); delay(TIEMPO);
+   ledWrite(B00000011); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B00000000); delay(TIEMPO);
+  delay(500000000000000000);}
+void LetraJ (){
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11100011); delay(TIEMPO);
+   ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B01000111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   delay(500000000000000000);}
+void LetraT(){
+   ledWrite(B00011000); delay(TIEMPO);
+   ledWrite(B00011000); delay(TIEMPO);
+   ledWrite(B00011000); delay(TIEMPO);
+   ledWrite(B00011000); delay(TIEMPO);
+   ledWrite(B00011000); delay(TIEMPO);
+   ledWrite(B00011000); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+  delay(500000000000000000);}
+void LetraU (){
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+  delay(500000000000000000);}
+void LetraH (){
+   ledWrite(B11100111); delay(TIEMPO);
+   ledWrite(B11100111); delay(TIEMPO);
+   ledWrite(B11100011); delay(TIEMPO);
    ledWrite(B11111111); delay(TIEMPO);
    ledWrite(B11111111); delay(TIEMPO);
    ledWrite(B11100111); delay(TIEMPO);
+   ledWrite(B11100111); delay(TIEMPO);
+   ledWrite(B11100111); delay(TIEMPO);
+   delay(500000000000000000);}
+void LetraI (){
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B00011000); delay(TIEMPO);
+   ledWrite(B00011000); delay(TIEMPO);
+   ledWrite(B00011000); delay(TIEMPO);
+   ledWrite(B00011000); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   delay(500000000000000000);}
+void LetraW(){
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11011011); delay(TIEMPO);
+   ledWrite(B11011011); delay(TIEMPO);
+   ledWrite(B11011011); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+  delay(500000000000000000);}
+void LetraF (){
+   ledWrite(B11100000); delay(TIEMPO);
+   ledWrite(B11100000); delay(TIEMPO);
+   ledWrite(B11100000); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11100000); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   delay(500000000000000000);}
+void LetraY(){
+   ledWrite(B00011000); delay(TIEMPO);
+   ledWrite(B00011000); delay(TIEMPO);
+   ledWrite(B00011000); delay(TIEMPO);
+   ledWrite(B00011000); delay(TIEMPO);
+   ledWrite(B00011000); delay(TIEMPO);
+   ledWrite(B01100100); delay(TIEMPO);
+   ledWrite(B01100110); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+  delay(500000000000000000);}
+void LetraE (){
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11100000); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11100000); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   delay(500000000000000000);}
+void LetraX(){
+   ledWrite(B11000011); delay(TIEMPO);
    ledWrite(B01100110); delay(TIEMPO);
    ledWrite(B00111100); delay(TIEMPO);
    ledWrite(B00011000); delay(TIEMPO);
+   ledWrite(B00111100); delay(TIEMPO);
+   ledWrite(B01100110); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B00000000); delay(TIEMPO);
+  delay(500000000000000000);}
+void LetraD(){
+   ledWrite(B11111110); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11100011); delay(TIEMPO);
+   ledWrite(B11100011); delay(TIEMPO);
+   ledWrite(B11100011); delay(TIEMPO);
+   ledWrite(B11100011); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111110); delay(TIEMPO);
+   delay(500000000000000000);}
+char let='+';
+void setup(){
+   Serial.begin(9600);
+   pinMode(pinData, OUTPUT);
+   pinMode(pinLatch, OUTPUT);
+  pinMode(pinClock, OUTPUT);}
+void loop(){
+  if (Serial.available()>0)
+  {
+    let=Serial.read();
+   
+  }
+  if (let == 'a') {
+    LetraA();}
+  if (let == 'b'){
+    LetraB();}
+  if (let == 'c') {
+    LetraC();}
+  if (let == 'l') {
+    CaritaFeliz();}
+  if (let == 'z'){
+    LetraZ();}
+  if (let == '1'){
+    Num1();}
+}
+   
+ Serial.begin(9600);
+  while(Serial.available()==0){
+let= Serial.read();}
+  
+   pinMode(pinData, OUTPUT);
+   pinMode(pinLatch, OUTPUT);
+   pinMode(pinClock, OUTPUT);
+}
 
-Letra B
-ledWrite(B11111110); delay(TIEMPO);
-   ledWrite(B11111111); delay(TIEMPO);
-   ledWrite(B11000011); delay(TIEMPO);
-   ledWrite(B11111110); delay(TIEMPO);
-   ledWrite(B11111110); delay(TIEMPO);
-   ledWrite(B11000011); delay(TIEMPO);
-   ledWrite(B11111111); delay(TIEMPO);
-   ledWrite(B11111110); delay(TIEMPO);
+void loop(){
+
+	Serial.print(let);}
 

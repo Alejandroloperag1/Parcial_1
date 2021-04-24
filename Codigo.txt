@@ -1,9 +1,30 @@
 /*Funcionamiento y desarrollo de las funciones que se 
 encargaran de mostrarun patron de letras y 
 numeros en los leds del circuito*/
+
+/*MANUAL DE USO DEL USUARIO
+
+En el codigo se declaran primero los pibes a utilizar que serian 
+el pin 2, 3 y 4 y se define un parametro tiempo que nos ayudara
+a ejecutar las lineas
+
+La funcion ledWrite nos permite escribir una secuencia binaria que
+se mostrara linea a linea.
+En las funciones void se ejecutan los esquemas de las formas que 
+queremos.
+son 8 digitalwrite, esto porque la matriz tiene 8 filas
+y tiene tambien 1 byte cada digital write.
+La secuencia se imprime de abajo para arriba, es decir.
+La ultima fila en el codigo es la primera en los leds.
+
+Luego en el void loop están los if, que evaluan que caracter ingresa el 
+usuario y depende a lo que ingrese lo imprime en la matriz.*/
+
+
 int pinData  = 2;
 int pinLatch = 3;
 int pinClock = 4;
+int menu;
 #define TIEMPO 15
 
 
@@ -12,19 +33,10 @@ void ledWrite(int Led){
    digitalWrite(pinLatch, HIGH);
    digitalWrite(pinLatch, LOW);
 }
-void CaritaFeliz(){
-   ledWrite(B00111100); delay(TIEMPO);
-   ledWrite(B01100110); delay(TIEMPO);
-   ledWrite(B11000011); delay(TIEMPO);
-   ledWrite(B11000011); delay(TIEMPO);
-   ledWrite(B00000000); delay(TIEMPO);
-   ledWrite(B00000000); delay(TIEMPO);
-   ledWrite(B01100110); delay(TIEMPO);
-   ledWrite(B01100110); delay(TIEMPO);
-  delay(500000000000000000);}
+
 
 void Num9(){
-     ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B00000111); delay(TIEMPO);
    ledWrite(B00000111); delay(TIEMPO);
    ledWrite(B00000111); delay(TIEMPO);
    ledWrite(B11111111); delay(TIEMPO);
@@ -34,7 +46,7 @@ void Num9(){
    ledWrite(B11111111); delay(TIEMPO);
   delay(500000000000000000);}
 void Num8(){
-     ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
    ledWrite(B11100111); delay(TIEMPO);
    ledWrite(B11000011); delay(TIEMPO);
    ledWrite(B11111111); delay(TIEMPO);
@@ -44,27 +56,27 @@ void Num8(){
    ledWrite(B11111111); delay(TIEMPO);
   delay(500000000000000000);}
 void Num7(){
-     ledWrite(B00000111); delay(TIEMPO);
-   ledWrite(B00000111); delay(TIEMPO);
-   ledWrite(B00011111); delay(TIEMPO);
-   ledWrite(B00011111); delay(TIEMPO);
-   ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B11100000); delay(TIEMPO);
+   ledWrite(B01110000); delay(TIEMPO);
+   ledWrite(B00111000); delay(TIEMPO);
+   ledWrite(B00011100); delay(TIEMPO);
+   ledWrite(B00001110); delay(TIEMPO);
    ledWrite(B00000111); delay(TIEMPO);
    ledWrite(B11111111); delay(TIEMPO);
    ledWrite(B11111111); delay(TIEMPO);
   delay(500000000000000000);}
 void Num6(){
-     ledWrite(B11111111); delay(TIEMPO);
-   ledWrite(B11111111); delay(TIEMPO);
-   ledWrite(B00000111); delay(TIEMPO);
    ledWrite(B11111111); delay(TIEMPO);
    ledWrite(B11111111); delay(TIEMPO);
-   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11100011); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11000000); delay(TIEMPO);
    ledWrite(B11111111); delay(TIEMPO);
    ledWrite(B11111111); delay(TIEMPO);
   delay(500000000000000000);}
 void Num5(){
-     ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
    ledWrite(B11111111); delay(TIEMPO);
    ledWrite(B00000111); delay(TIEMPO);
    ledWrite(B11111111); delay(TIEMPO);
@@ -74,7 +86,7 @@ void Num5(){
    ledWrite(B11111111); delay(TIEMPO);
   delay(500000000000000000);}
 void Num4(){
-     ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B00000111); delay(TIEMPO);
    ledWrite(B00000111); delay(TIEMPO);
    ledWrite(B00000111); delay(TIEMPO);
    ledWrite(B11111111); delay(TIEMPO);
@@ -84,7 +96,7 @@ void Num4(){
    ledWrite(B00011111); delay(TIEMPO);
   delay(500000000000000000);}
 void Num3(){
-      ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
    ledWrite(B11111111); delay(TIEMPO);
    ledWrite(B00000011); delay(TIEMPO);
    ledWrite(B11111111); delay(TIEMPO);
@@ -94,7 +106,7 @@ void Num3(){
    ledWrite(B11111111); delay(TIEMPO);
   delay(500000000000000000);}
 void Num2(){
-     ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
    ledWrite(B11111111); delay(TIEMPO);
    ledWrite(B11100000); delay(TIEMPO);
    ledWrite(B11111111); delay(TIEMPO);
@@ -135,7 +147,7 @@ void LetraA (){
    ledWrite(B00011000); delay(TIEMPO);
   delay(500000000000000000);}
 void LetraB(){
-     ledWrite(B11111110); delay(TIEMPO);
+   ledWrite(B11111110); delay(TIEMPO);
    ledWrite(B11111111); delay(TIEMPO);
    ledWrite(B11000011); delay(TIEMPO);
    ledWrite(B11111110); delay(TIEMPO);
@@ -245,9 +257,9 @@ void LetraL(){
    ledWrite(B11100000); delay(TIEMPO);
    delay(500000000000000000);}
 void LetraM(){
-   ledWrite(B11011011); delay(TIEMPO);
-   ledWrite(B11011011); delay(TIEMPO);
-   ledWrite(B11011011); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
    ledWrite(B11011011); delay(TIEMPO);
    ledWrite(B11011011); delay(TIEMPO);
    ledWrite(B11111111); delay(TIEMPO);
@@ -308,12 +320,12 @@ void LetraR(){
 
 void LetraS(){
    ledWrite(B11111110); delay(TIEMPO);
-   ledWrite(B00000001); delay(TIEMPO);
-   ledWrite(B00000001); delay(TIEMPO);
-   ledWrite(B00000001); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B00000011); delay(TIEMPO);
+   ledWrite(B00000011); delay(TIEMPO);
    ledWrite(B01111110); delay(TIEMPO);
-   ledWrite(B10000000); delay(TIEMPO);
-   ledWrite(B10000000); delay(TIEMPO);
+   ledWrite(B11000000); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
    ledWrite(B01111111); delay(TIEMPO);
   delay(500000000000000000);}
 void LetraT(){
@@ -386,19 +398,42 @@ void LetraZ(){
    ledWrite(B11111111); delay(TIEMPO);
    ledWrite(B00000000); delay(TIEMPO);
   delay(500000000000000000);}
+void verificacion(){
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
+  delay(500000000000000000);}
+
+
 
 char let='+';
 void setup(){
    Serial.begin(9600);
    pinMode(pinData, OUTPUT);
    pinMode(pinLatch, OUTPUT);
-  pinMode(pinClock, OUTPUT);}
+  pinMode(pinClock, OUTPUT);
+  Serial.println("Ingrese V para funcion verificacion "); 
+  Serial.println("Ingrese cualquier caracter en minuscula para verlo en el circuito");
+  Serial.println("Ingrese un numero del 0 al 9 para verlo en el circuito"); 
+}
 void loop(){
+  
+  
+  
   if (Serial.available()>0)
   {
     let=Serial.read();
    
   }
+
+  if (let =='V'){
+    verificacion();} 
+
   if (let == 'a') {
     LetraA();}
   if (let == 'b'){
@@ -434,9 +469,8 @@ void loop(){
     LetraP();}
   if (let == 'q') {
     LetraQ();}
-   if (let == 'r') {
+  if (let == 'r') {
     LetraR();}
-
   if (let == 's') {
     LetraS();}
   if (let == 't') {
@@ -477,7 +511,6 @@ void loop(){
     Num9();}
   if (let == '0'){
     Num0();}
- 
+  
   
 }
-   

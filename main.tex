@@ -62,13 +62,30 @@ Se debe trabajar bajo ciertos parametros establecidos.
 -Se necesita hacer un esquema
 
 El proyecto se realiza en un equipo integrado por 3 estudiantes que analizaran, discutiran y trabajaran de manera armonica para completar la tarea con exito.
-\section{Esquema Utilizado Para Formacion Del Codigo}
-Pasos y procedimientos que se llevaron a cabo para la formacion del codigo
 
 
+\subsection{Manual de uso del usuario}
+
+
+En el codigo se declaran primero los pibes a utilizar que serian 
+el pin 2, 3 y 4 y se define un parametro tiempo que nos ayudara
+a ejecutar las lineas
+
+La funcion ledWrite nos permite escribir una secuencia binaria que
+se mostrara linea a linea.
+En las funciones void se ejecutan los esquemas de las formas que 
+queremos.
+son 8 digitalwrite, esto porque la matriz tiene 8 filas
+y tiene tambien 1 byte cada digital write.
+La secuencia se imprime de abajo para arriba, es decir.
+La ultima fila en el codigo es la primera en los leds.
+
+Luego en el void loop están los if, que evaluan que caracter ingresa el 
+usuario y depende a lo que ingrese lo imprime en la matriz.*/
 
 \subsection{código en el documento}
 //Funcionamiento y desarrollo de las funciones que se encargaran de mostrar un patron de letras y numeros en los leds del circuito 
+
 
 int pinData  = 2;
 
@@ -87,29 +104,10 @@ void ledWrite(int Led){
    
    digitalWrite(pinLatch, LOW);
 }
-void CaritaFeliz(){
-   
-   ledWrite(B00111100); delay(TIEMPO);
-   
-   ledWrite(B01100110); delay(TIEMPO);
-   
-   ledWrite(B11000011); delay(TIEMPO);
-   
-   ledWrite(B11000011); delay(TIEMPO);
-   
-   ledWrite(B00000000); delay(TIEMPO);
-   
-   ledWrite(B00000000); delay(TIEMPO);
-   
-   ledWrite(B01100110); delay(TIEMPO);
-   
-   ledWrite(B01100110); delay(TIEMPO);
-  
-  delay(500000000000000000);}
 
 void Num9(){
      
-     ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B00000111); delay(TIEMPO);
    
    ledWrite(B00000111); delay(TIEMPO);
    
@@ -129,7 +127,7 @@ void Num9(){
   
 void Num8(){
      
-     ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
    
    ledWrite(B11100111); delay(TIEMPO);
    
@@ -148,41 +146,43 @@ void Num8(){
   delay(500000000000000000);}
   
 void Num7(){
-     
-     ledWrite(B00000111); delay(TIEMPO);
-   
+
+   ledWrite(B11100000); delay(TIEMPO);
+
+   ledWrite(B01110000); delay(TIEMPO);
+
+   ledWrite(B00111000); delay(TIEMPO);
+
+   ledWrite(B00011100); delay(TIEMPO);
+
+   ledWrite(B00001110); delay(TIEMPO);
+
    ledWrite(B00000111); delay(TIEMPO);
-   
-   ledWrite(B00011111); delay(TIEMPO);
-   
-   ledWrite(B00011111); delay(TIEMPO);
-   
-   ledWrite(B00000111); delay(TIEMPO);
-   
-   ledWrite(B00000111); delay(TIEMPO);
-   
+
    ledWrite(B11111111); delay(TIEMPO);
-   
+
    ledWrite(B11111111); delay(TIEMPO);
-  
+
   delay(500000000000000000);}
   
 void Num6(){
-     ledWrite(B11111111); delay(TIEMPO);
-   
-   ledWrite(B11111111); delay(TIEMPO);
-   
-   ledWrite(B00000111); delay(TIEMPO);
    
    ledWrite(B11111111); delay(TIEMPO);
    
    ledWrite(B11111111); delay(TIEMPO);
    
-   ledWrite(B11000011); delay(TIEMPO);
+   ledWrite(B11100011); delay(TIEMPO);
    
    ledWrite(B11111111); delay(TIEMPO);
    
    ledWrite(B11111111); delay(TIEMPO);
+   
+   ledWrite(B11000000); delay(TIEMPO);
+   
+   ledWrite(B11111111); delay(TIEMPO);
+   
+   ledWrite(B11111111); delay(TIEMPO);
+  
   delay(500000000000000000);}
   
 void Num5(){
@@ -207,7 +207,7 @@ void Num5(){
 
 void Num4(){
      
-     ledWrite(B00000111); delay(TIEMPO);
+   ledWrite(B00000111); delay(TIEMPO);
    
    ledWrite(B00000111); delay(TIEMPO);
    
@@ -227,7 +227,7 @@ void Num4(){
 
 void Num3(){
       
-      ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
    
    ledWrite(B11111111); delay(TIEMPO);
    
@@ -247,7 +247,7 @@ void Num3(){
 
 void Num2(){
      
-     ledWrite(B11111111); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
    
    ledWrite(B11111111); delay(TIEMPO);
    
@@ -547,12 +547,12 @@ void LetraL(){
    delay(500000000000000000);}
 
 void LetraM(){
-  
-   ledWrite(B11011011); delay(TIEMPO);
    
-   ledWrite(B11011011); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
    
-   ledWrite(B11011011); delay(TIEMPO);
+   ledWrite(B11000011); delay(TIEMPO);
+   
+   ledWrite(B11000011); delay(TIEMPO);
    
    ledWrite(B11011011); delay(TIEMPO);
    
@@ -670,17 +670,17 @@ void LetraS(){
 
    ledWrite(B11111110); delay(TIEMPO);
 
-   ledWrite(B00000001); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
 
-   ledWrite(B00000001); delay(TIEMPO);
+   ledWrite(B00000011); delay(TIEMPO);
 
-   ledWrite(B00000001); delay(TIEMPO);
+   ledWrite(B00000011); delay(TIEMPO);
 
    ledWrite(B01111110); delay(TIEMPO);
 
-   ledWrite(B10000000); delay(TIEMPO);
+   ledWrite(B11000000); delay(TIEMPO);
 
-   ledWrite(B10000000); delay(TIEMPO);
+   ledWrite(B11111111); delay(TIEMPO);
 
    ledWrite(B01111111); delay(TIEMPO);
 
@@ -848,26 +848,27 @@ void verificacion(){
 
   delay(500000000000000000);}
 
-String let='+';
+char let='+';
 
 void setup(){
 
-   Serial.begin(9600);
+  Serial.begin(9600);
 
-   pinMode(pinData, OUTPUT);
+  pinMode(pinData, OUTPUT);
 
-   pinMode(pinLatch, OUTPUT);
+  pinMode(pinLatch, OUTPUT);
 
-   pinMode(pinClock, OUTPUT);}
+  pinMode(pinClock, OUTPUT);
 
-void loop(){
+  Serial.println("Ingrese V para funcion verificacion "); 
 
-  if (Serial.available()>0)
+  Serial.println("Ingrese cualquier caracter en minuscula para 
+  verlo en el circuito");
+    
+ Serial.println("Ingrese un numero del 0 al 9 para verlo en el circuito"); 
 
-  {
-    let=Serial.readString();
-   
-  }
+  
+}
   if (let == 'a') {
     LetraA();}
   
@@ -979,12 +980,7 @@ void loop(){
   
   if (let == '0'){
     Num0();}
- 
   
-}
-   
-
-
 \subsection{Problemas Al Realizar El Circuito }
 Al momento en que comenzamos a realizar el circuito surguieron varias preguntas del como iria toda la conexion para poder darle un buen funicionamiento a todos los leds y los demas elementos implementados para el dasarrollo del problema, para la solucion de estas preguntas nos guiamos de la conexion de una matriz de leds de 8x8 ya creada, pero implementando las condiciones puestas por el profesor. al terminar de hacer la elaboracion del circuito, lo empezamos a probar y nos dimos cuenta de que al momento de imprimir algunas letras o numeros, quedaban algunos leds apagados, por lo cual, realizamos una revision de todas las resistencias y de los leds y nos pudimos dar cuenta de que habian problemas en varias conexiones. Le pudimos dar solucion a este problema y ya al momento de ver su funcionamiento, todo iba correcto y imprimia las letras y numeros de nanera adecuada. 
 
@@ -998,7 +994,9 @@ Ya terminado este paso, procedimos a hacer una serie de pruebas en el codigo. Gr
 Luego comprobamos y funcionaba correctamente segun los requerimientos. 
 
 \section{Conclusion} \label{Conclusion}
-La conclusion es que augusto es un hpta 
+Para la solución de este reto se presentaron varias etapas muy importantes que ayudaron a la realización del circuito y el codigo, como lo fueron la investigación, el análisis de proyectos similares, poner a prueba lo aprendido hasta ahora en el curso, entre muchas otras; pero en conclusión una de las etapas fundamentales o quizá la más importante fue el de prueba y error. Cada idea que pensabamos que podía ser de ayuda, la plasmabamos 
+y ensayabamos, para darle forma; durante el proceso tuvimos muchos errores en el codigo,
+tal vez quemamos algunos circuitos, pero todo eso nos sirvío para aprender y realizarlo. 
 \section{Inclusión de imágenes} \label{images}
 En la imagen (\ref{fig:circuito.PNG}), Se muestra el circuto ya completamente realizado.
 
